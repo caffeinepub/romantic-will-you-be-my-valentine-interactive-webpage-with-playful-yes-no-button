@@ -1,0 +1,39 @@
+{
+  "kind": "build_request",
+  "title": "Randomly reposition the No button anywhere on screen after each click",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-10",
+      "text": "Update the Valentine page No button behavior so that after each successful No click, the No button immediately moves to a random position anywhere within the visible viewport (i.e., potentially far away from its previous position), while still keeping the existing evasive behavior on pointer approach and still triggering the existing escalating No prompt logic.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-3"
+        ],
+        "quotes": [
+          "make the no button change its position after each click randomly to any part of the screen"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Given the main Valentine page is visible, when the user successfully clicks the No button, the No button re-renders at a new random (x,y) location within the visible browser viewport without being clipped off-screen.",
+        "The No click continues to increment the existing escalating prompt message sequence exactly as before.",
+        "The existing evasive behavior on pointer enter / mouse down still works (the No button continues to dodge the cursor), in addition to the new random reposition-on-click behavior.",
+        "The No button never renders partially outside the viewport (account for the button’s width/height when choosing a random position).",
+        "Behavior works on both desktop and mobile viewport sizes (no reliance on a fixed 200x80 container that restricts movement)."
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not edit files under frontend/src/components/ui (shadcn read-only components).",
+    "Keep changes within the existing React + TypeScript frontend; no backend changes are required."
+  ],
+  "nonGoals": [
+    "Do not change any existing user-facing text (heading, prompts, celebration text).",
+    "Do not change the Yes button or celebration screen behavior."
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}

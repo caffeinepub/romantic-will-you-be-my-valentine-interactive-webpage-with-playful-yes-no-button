@@ -1,0 +1,30 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Valentine No button: random viewport reposition on click + preserve evasive behavior",
+  "requirements": [
+    {
+      "id": "REQ-10",
+      "summary": "After each successful No click, instantly reposition the No button to a new random (x,y) within the visible viewport while preserving existing evasive-on-approach behavior and escalating No prompt logic.",
+      "acceptanceCriteria": [
+        "Given the main Valentine page is visible, when the user successfully clicks the No button, the No button re-renders at a new random (x,y) location within the visible browser viewport without being clipped off-screen.",
+        "The No click continues to increment the existing escalating prompt message sequence exactly as before.",
+        "The existing evasive behavior on pointer enter / mouse down still works (the No button continues to dodge the cursor), in addition to the new random reposition-on-click behavior.",
+        "The No button never renders partially outside the viewport (account for the button’s width/height when choosing a random position).",
+        "Behavior works on both desktop and mobile viewport sizes (no reliance on a fixed 200x80 container that restricts movement)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/hooks/useEvasiveButton.ts",
+          "operation": "modify",
+          "description": "Update the evasive positioning logic to support viewport-bounded movement (not a fixed-size container), including: (1) computing current button position in the chosen coordinate space, (2) moving away from pointer by applying a delta to the current position, and (3) clamping results so the button stays fully within the visible viewport (accounting for button width/height and mobile visual viewport if available)."
+        },
+        {
+          "path": "frontend/src/components/EvasiveNoButton.tsx",
+          "operation": "modify",
+          "description": "Refactor No button positioning to be relative to the visible viewport (e.g., fixed positioning with x/y in viewport coordinates) instead of the current 200x80 container; on each successful click: (1) call the existing onNo callback unchanged to preserve escalating prompts, then (2) immediately set a new random viewport-safe position; also keep the existing pointer-enter and mouse-down evasive triggers wired to the updated hook so the button continues to dodge the cursor across the full screen on desktop and mobile. Ensure no changes to shadcn/ui components under frontend/src/components/ui."
+        }
+      ]
+    }
+  ]
+}

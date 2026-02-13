@@ -1,0 +1,41 @@
+{
+  "kind": "coverage_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-13T14:40:33.673Z",
+  "sources": {
+    "buildRequest": true,
+    "implementationPlan": true
+  },
+  "requirements": {
+    "total": 1,
+    "implemented": 1,
+    "items": [
+      {
+        "id": "REQ-10",
+        "summary": "Update the Valentine page No button behavior so that after each successful No click, the No button immediately moves to a random position anywhere within the visible viewport (i.e., potentially far away from its previous position), while still keeping the existing evasive behavior on pointer approach and still triggering the existing escalating No prompt logic.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/hooks/useEvasiveButton.ts",
+          "frontend/src/components/EvasiveNoButton.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/hooks/useEvasiveButton.ts",
+          "frontend/src/components/EvasiveNoButton.tsx"
+        ]
+      }
+    ]
+  },
+  "changedFiles": [
+    "build-request.json",
+    "feature_evidence.json",
+    "frontend-file-summaries.txt",
+    "frontend-implementation-plan.json",
+    "frontend/src/components/EvasiveNoButton.tsx",
+    "frontend/src/hooks/useEvasiveButton.ts",
+    "frontend/src/pages/ValentinePage.tsx",
+    "project_state.json",
+    "scratch/component-selection.json",
+    "spec.md",
+    "spec_vs_diff_report.json"
+  ]
+}

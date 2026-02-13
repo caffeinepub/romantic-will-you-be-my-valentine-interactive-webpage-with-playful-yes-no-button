@@ -1,0 +1,12 @@
+{
+  "frontend/src/App.tsx": "Main application entry point that renders the ValentinePage component.",
+  "frontend/src/pages/ValentinePage.tsx": "Main Valentine's page with custom heading \"WIll you be my valentines zaaaluuttiii?\", Yes/No buttons, escalating No-prompt sequence (7 prompts starting with \"Are you sure?\"), and state management for celebration mode and No-click tracking.",
+  "frontend/src/components/ValentineDecor.tsx": "Decorative component that renders the romantic background image, floating flower clusters, and heart stickers with animations.",
+  "frontend/src/components/EvasiveNoButton.tsx": "Interactive \"No\" button component with fixed viewport positioning that dodges the cursor on hover/mousedown and jumps to a random viewport location on each successful click, while triggering the onNo callback to increment escalating prompts.",
+  "frontend/src/components/CelebrationView.tsx": "Celebration screen displayed after clicking \"Yes\", featuring animated fireworks, floating hearts, and the custom success message \"YAAAYYY i lovee youuu smm zaaluubabbyyyyy😘💋\" with a replay button.",
+  "frontend/src/hooks/useEvasiveButton.ts": "Custom hook that calculates safe repositioning for the evasive \"No\" button within viewport bounds, providing both moveAway (for dodging pointer) and getRandomPosition (for click-triggered random repositioning) functions.",
+  "frontend/src/hooks/useQueries.ts": "Empty placeholder file for React Query hooks (no backend methods needed for this app).",
+  "frontend/src/components/animations/celebration.css": "CSS keyframe animations for fireworks bursts, floating hearts, fade-ins, scale effects, and slide-up transitions used in the celebration view.",
+  "frontend/src/index.css": "Global styles with romantic OKLCH color palette (blush, rose, cream, warm gold), custom utility classes, and floating/pulse animations for decorative elements.",
+  "frontend/tailwind.config.js": "Tailwind configuration extended with romantic color tokens, custom font families, increased border radius, and romantic shadow utilities."
+}

@@ -1,0 +1,24 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-update-the-valentine-page-no-button-behavior-so-that-after-each-successful-no-click-the-no-button-immediately-moves-to-a-random-position-anywhere-within-the-visible-viewport-i-e-potentially-far-away-from-its-previous-position-while-still-keeping-the-existing-evasive-behavior-on-pointer-approach-and-still-triggering-the-existing-escalating-no-prompt-logic",
+      "featureTitle": "Update the Valentine page No button behavior so that after each successful No click, the No button immediately moves to a random position anywhere within the visible viewport (i.e., potentially far away from its previous position), while still keeping the existing evasive behavior on pointer approach and still triggering the existing escalating No prompt logic.",
+      "files": [
+        "frontend/src/components/EvasiveNoButton.tsx",
+        "frontend/src/hooks/useEvasiveButton.ts"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-10"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

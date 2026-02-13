@@ -1,0 +1,16 @@
+{
+  "kind": "spec_vs_diff_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-13T14:40:33.671Z",
+  "summary": "REQ-10 appears implemented: the No button is now fixed-positioned and repositions to a random in-viewport (x,y) after each successful click while preserving evasive move-away behavior on pointer enter/mousedown and continuing to call the existing onNo callback that increments the escalating prompt sequence. Viewport bounds are accounted for using the button’s measured width/height, with mobile-friendly sizing via visualViewport when available.",
+  "missing_requirements": [],
+  "hallucinated_features": [],
+  "confidence": 0.78,
+  "changed_files": [
+    "frontend-file-summaries.txt",
+    "frontend/src/components/EvasiveNoButton.tsx",
+    "frontend/src/hooks/useEvasiveButton.ts",
+    "frontend/src/pages/ValentinePage.tsx",
+    "project_state.json"
+  ]
+}

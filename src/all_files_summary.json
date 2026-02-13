@@ -1,0 +1,21 @@
+{
+  "backend/main.mo": "Minimal Motoko actor with no methods.",
+  "feature_evidence.json": "Feature evidence report linking the No-button update to specific frontend files and components.",
+  "frontend-file-summaries.txt": "JSON list summarizing all frontend files and their roles in the Valentine app.",
+  "frontend/index.css": "Tailwind base styles plus CSS variables defining light/dark romantic color themes.",
+  "frontend/index.html": "HTML entry point that loads the React app via main.tsx.",
+  "frontend/src/App.tsx": "Renders the ValentinePage component as the root of the app.",
+  "frontend/src/components/animations/celebration.css": "CSS animations for fireworks, floating hearts, fade-ins, and scale effects used in celebrations.",
+  "frontend/src/components/CelebrationView.tsx": "Displays animated fireworks and floating hearts with a replay option after a Yes response.",
+  "frontend/src/components/EvasiveNoButton.tsx": "A No button that dodges pointer approach and jumps to a random viewport spot after each click.",
+  "frontend/src/components/ValentineDecor.tsx": "Provides background images, flowers, and animated hearts for the Valentine page.",
+  "frontend/src/hooks/useActor.ts": "Creates and manages a backend actor tied to Internet Identity and refreshes dependent queries.",
+  "frontend/src/hooks/useEvasiveButton.ts": "Logic for moving the No button away from the pointer and picking random safe positions.",
+  "frontend/src/hooks/useInternetIdentity.ts": "Manages Internet Identity auth state, login flow, and persistence via AuthClient.",
+  "frontend/src/hooks/useQueries.ts": "Empty placeholder file exporting nothing.",
+  "frontend/src/index.css": "Defines Tailwind layers and a large set of custom OKLCH-based romantic theme variables for light and dark modes.",
+  "frontend/src/main.tsx": "Bootstraps the React app with React Query and Internet Identity providers and loads global styles.",
+  "frontend/src/pages/ValentinePage.tsx": "Implements the main Valentine interaction page with Yes/No logic, escalating prompts, and celebration view switching.",
+  "frontend/tailwind.config.js": "Configures Tailwind theme extensions, custom colors mapped to CSS variables, fonts, animations, and plugins.",
+  "project_state.json": "Stores project metadata, requirements, and feature tracking for the Valentine app."
+}
